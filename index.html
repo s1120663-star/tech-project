@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>股票分析工程師 - 連結中心</title>
+    <!-- 載入 Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 載入 Lucide Icons (用於專業圖標) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* 使用 Inter 字體 (現代專業字體) */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #e5e7eb; /* 淺灰色文字 */
+            background-color: #0d1117; /* 極深背景色 */
+            /* 設置動態背景動畫 (漸變流動效果) */
+            background: linear-gradient(135deg, #0d1117, #161b22, #0d1117);
+            background-size: 400% 400%;
+            animation: gradient-flow 15s ease infinite;
+        }
+
+        /* 關鍵幀動畫：讓背景色塊緩慢流動，增加動態感 */
+        @keyframes gradient-flow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* 連結按鈕的動態效果 */
+        .link-button {
+            transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .link-button:hover {
+            transform: translateY(-4px); /* 輕微上浮 */
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.6); /* 更明顯的陰影 */
+            filter: brightness(110%); /* 輕微增亮 */
+        }
+
+        .profile-card {
+            /* 輕微的模糊效果，讓卡片看起來更有層次感 */
+            backdrop-filter: blur(8px);
+            background-color: rgba(22, 27, 34, 0.8); /* 稍微透明的深色卡片背景 */
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 flex items-start sm:items-center justify-center">
+
+    <div class="w-full max-w-sm sm:max-w-lg mx-auto space-y-8 p-6 sm:p-10 mt-8 sm:mt-0 rounded-3xl profile-card border border-gray-700 shadow-2xl">
+        
+        <!-- 專業身份區塊 (Profile Header) -->
+        <header class="text-center space-y-3">
+            <!-- 專業/數據圖標 -->
+            <div class="text-4xl text-green-400 mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-gray-800 border-2 border-green-500 shadow-lg">
+                <i data-lucide="activity" class="w-8 h-8"></i>
+            </div>
+            
+            <h1 class="text-3xl font-extrabold text-white tracking-wider">
+                股票分析工程師
+            </h1>
+            <p class="text-xl text-green-400 font-medium">
+                量化交易 | 自動化技術
+            </p>
+            <p class="text-base text-gray-400">
+                運用 Python 和數據科學，創造高效能的交易策略與系統。
+            </p>
+        </header>
+
+        <!-- 主要專業連結區塊 -->
+        <section class="space-y-5">
+            <h2 class="text-lg font-semibold text-gray-300 border-b border-gray-700 pb-2">
+                核心專業連結
+            </h2>
+            
+            <!-- GitHub 連結 (深灰/藍色，適合程式碼) -->
+            <!-- RWD: 大小和間距在手機上依然舒適 -->
+            <a href="https://github.com/yourusername" target="_blank" 
+               class="link-button flex items-center justify-center p-4 bg-gray-700 hover:bg-gray-600 text-white rounded-xl w-full">
+                <i data-lucide="github" class="w-6 h-6 mr-4"></i>
+                <span class="font-bold text-lg">GitHub 策略程式碼庫</span>
+            </a>
+
+            <!-- LinkedIn 連結 (標準藍色) -->
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" 
+               class="link-button flex items-center justify-center p-4 bg-blue-700 hover:bg-blue-600 text-white rounded-xl w-full">
+                <i data-lucide="linkedin" class="w-6 h-6 mr-4"></i>
+                <span class="font-bold text-lg">LinkedIn 專業履歷</span>
+            </a>
+
+            <!-- Email 連結 (醒目顏色) -->
+            <a href="mailto:youremail@example.com"
+               class="link-button flex items-center justify-center p-4 bg-yellow-600 hover:bg-yellow-500 text-gray-900 rounded-xl w-full">
+                <i data-lucide="mail" class="w-6 h-6 mr-4"></i>
+                <span class="font-bold text-lg">Email 聯繫</span>
+            </a>
+        </section>
+
+        <!-- 社交/生活分享 (Linktree 風格) -->
+        <section class="space-y-4 pt-4">
+            <h2 class="text-lg font-semibold text-gray-300 border-b border-gray-700 pb-2">
+                社群與生活 (IG Linktree)
+            </h2>
+            
+            <!-- Instagram 連結 (Instagram 主題色) -->
+            <a href="https://instagram.com/yourhandle" target="_blank" 
+               class="link-button flex items-center justify-center p-3 bg-fuchsia-600 hover:bg-fuchsia-500 text-white rounded-lg w-full">
+                <i data-lucide="camera" class="w-5 h-5 mr-3"></i>
+                <span class="font-semibold">Instagram (量化工程師日常)</span>
+            </a>
+            
+            <!-- 其他社交媒體或個人項目 -->
+            <a href="https://t.me/yourchannel" target="_blank" 
+               class="link-button flex items-center justify-center p-3 bg-cyan-600 hover:bg-cyan-500 text-white rounded-lg w-full">
+                <i data-lucide="message-square" class="w-5 h-5 mr-3"></i>
+                <span class="font-semibold">Telegram/Discord 社群</span>
+            </a>
+            
+        </section>
+
+        <!-- 頁腳 -->
+        <footer class="text-center text-xs text-gray-500 pt-6">
+            <p>最後更新: 2025</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // 初始化 Lucide icons，讓 data-lucide 屬性轉換為 SVG 圖標
+        lucide.createIcons();
+    </script>
+</body>
+</html>
